@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>Survey Form</title>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <h1 id="title">Survey Form</h1>
+    <p id="description">Please fill out this form</p>
+    
+    <form id="survey-form">
+      <!-- Name Field -->
+      <label id="name-label" for="name">Name:</label>
+      <input id="name" type="text" placeholder="Enter your name" required>
+
+      <!-- Email Field -->
+      <label id="email-label" for="email">Email:</label>
+      <input id="email" type="email" placeholder="Enter your email" required>
+
+      <!-- Number Field (Age) -->
+      <label id="number-label" for="number">Age:</label>
+      <input id="number" type="number" min="10" max="99" placeholder="Age">
+
+      <!-- Dropdown Menu -->
+      <label for="dropdown">Current Role:</label>
+      <select id="dropdown">
+        <option value="">Select your role</option>
+        <option value="student">Student</option>
+        <option value="job">Full Time Job</option>
+      </select>
+
+      <!-- Radio Buttons (Grouped by name) -->
+      <p>Would you recommend us?</p>
+      <label>
+        <input type="radio" name="recommend" value="yes" checked> Yes
+      </label>
+      <label>
+        <input type="radio" name="recommend" value="no"> No
+      </label>
+
+      <!-- Checkboxes -->
+      <p>What would you like to see improved?</p>
+      <label>
+        <input type="checkbox" value="front-end"> Front-end Projects
+      </label>
+      <label>
+        <input type="checkbox" value="back-end"> Back-end Projects
+      </label>
+
+      <!-- Textarea for comments -->
+      <label for="comments">Any comments or suggestions?</label>
+      <textarea id="comments" placeholder="Enter your comment here..."></textarea>
+
+      <!-- Submit Button -->
+      <button id="submit" type="submit">Submit</button>
+    </form>
+  </body>
+</html>
