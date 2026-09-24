@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Documentation</title>
+    <style>
+        /* Base Resets */
+html, body {
+    min-width: 290px;
+    color: #4d4e53;
+    background-color: #ffffff;
+    font-family: 'Open Sans', Arial, sans-serif;
+    line-height: 1.5;
+    margin: 0;
+    padding: 0;
+}
+
+/* Side Navigation Bar (Desktop Layout) */
+#navbar {
+    position: fixed;
+    min-width: 290px;
+    top: 0;
+    left: 0;
+    width: 300px;
+    height: 100%;
+    border-right: 2px solid rgba(0, 122, 255, 0.1);
+    background-color: #f8f9fa;
+}
+
+#navbar header {
+    color: #333;
+    margin: 10px;
+    text-align: center;
+    font-size: 1.8rem;
+    font-weight: bold;
+}
+
+#navbar ul {
+    height: 88%;
+    padding: 0;
+    overflow-y: auto;
+    overflow-x: hidden;
+    list-style: none;
+}
+
+#navbar li {
+    border-top: 1px solid #e2e8f0;
+    position: relative;
+    width: 100%;
+}
+
+#navbar .nav-link {
+    display: block;
+    padding: 15px 25px;
+    color: #4d4e53;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+#navbar .nav-link:hover {
+    background-color: #edf2f7;
+    color: #000;
+}
+
+/* Main Content Styling */
+#main-doc {
+    position: absolute;
+    margin-left: 310px;
+    padding: 20px;
+    margin-bottom: 110px;
+}
+
+.main-section {
+    margin: 15px 0;
+}
+
+.main-section header {
+    color: #000000;
+    font-size: 1.8rem;
+    font-weight: 600;
+    margin: 10px 0;
+}
+
+p {
+    margin: 15px 0 15px 10px;
+}
+
+ul {
+    margin-left: 20px;
+}
+
+li {
+    margin: 10px 0;
+}
+
+/* Code Snippets Block Formatting */
+code {
+    display: block;
+    text-align: left;
+    white-space: pre-line;
+    position: relative;
+    word-break: normal;
+    word-wrap: normal;
+    line-height: 2;
+    background-color: #f7fafc;
+    padding: 15px;
+    margin: 10px;
+    border-left: 4px solid #3182ce;
+    border-radius: 4px;
+    font-family: monospace;
+}
+
+/* Media Query for Responsive Mobile/Tablet Breakpoint Layout */
+@media screen and (max-width: 815px) {
+    #navbar {
+        position: absolute;
+        top: 0;
+        padding: 0;
+        margin: 0;
+        width: 100%;
+        max-height: 275px;
+        border-right: none;
+        border-bottom: 2px solid #cbd5e0;
+        z-index: 1;
+    }
+
+    #navbar ul {
+        border-top: 1px solid #cbd5e0;
+        height: 200px;
+    }
+
+    #main-doc {
+        position: relative;
+        margin-left: 0px;
+        top: 270px;
+    }
+}
+    </style>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Left Navigation Bar -->
+    <nav id="navbar">
+        <header>JS Documentation</header>
+        <ul>
+            <li><a class="nav-link" href="#Introduction">Introduction</a></li>
+            <li><a class="nav-link" href="#What_you_should_already_know">What you should already know</a></li>
+            <li><a class="nav-link" href="#JavaScript_and_Java">JavaScript and Java</a></li>
+            <li><a class="nav-link" href="#Hello_World">Hello World</a></li>
+            <li><a class="nav-link" href="#Variables">Variables</a></li>
+            <li><a class="nav-link" href="#Declaring_variables">Declaring variables</a></li>
+            <li><a class="nav-link" href="#Variable_scope">Variable scope</a></li>
+        </ul>
+    </nav>
+
+    <!-- Main Content Area -->
+    <main id="main-doc">
+        <!-- SECTION 1 -->
+        <section class="main-section" id="Introduction">
+            <header>Introduction</header>
+            <article>
+                <p>JavaScript is a cross-platform, object-oriented scripting language. It is a small and lightweight language. Inside a host environment, JavaScript can be connected to the objects of its environment to provide programmatic control over them.</p>
+                <p>JavaScript contains a standard library of objects, such as Array, Date, and Math, and a core set of language elements such as operators, control structures, and statements.</p>
+                <ul>
+                    <li>Client-side JavaScript extends the core language by supplying objects to control a browser.</li>
+                    <li>Server-side JavaScript extends the core language by supplying objects relevant to running JavaScript on a server.</li>
+                </ul>
+            </article>
+        </section>
+
+        <!-- SECTION 2 -->
+        <section class="main-section" id="What_you_should_already_know">
+            <header>What you should already know</header>
+            <article>
+                <p>This guide assumes you have the following basic background:</p>
+                <ul>
+                    <li>A general understanding of the Internet and the World Wide Web (WWW).</li>
+                    <li>Good working knowledge of HyperText Markup Language (HTML).</li>
+                    <li>Some programming experience. If you are new to programming, try one of the tutorials linked on the main page about JavaScript.</li>
+                </ul>
+            </article>
+        </section>
+
+        <!-- SECTION 3 -->
+        <section class="main-section" id="JavaScript_and_Java">
+            <header>JavaScript and Java</header>
+            <article>
+                <p>JavaScript and Java are similar in some ways but fundamentally different in some others. The JavaScript language resembles Java but does not have Java's static typing and strong type checking.</p>
+                <p>In contrast to Java's compile-time system of classes built by declarations, JavaScript supports a runtime system based on a small number of data types representing numeric, Boolean, and string values.</p>
+            </article>
+        </section>
+
+        <!-- SECTION 4 (CODE ELEMENT #1) -->
+        <section class="main-section" id="Hello_World">
+            <header>Hello World</header>
+            <article>
+                <p>To get started with writing JavaScript, open the Scratchpad and write your first "Hello World" JavaScript code:</p>
+                <code>function greetMe(yourName) { alert("Hello " + yourName); } greetMe("World");</code>
+                <p>Select the code in the pad and press Ctrl+R to watch it unfold in your browser!</p>
+            </article>
+        </section>
+
+        <!-- SECTION 5 (CODE ELEMENT #2) -->
+        <section class="main-section" id="Variables">
+            <header>Variables</header>
+            <article>
+                <p>You use variables as symbolic names for values in your application. The names of variables, called identifiers, conform to certain rules.</p>
+                <code>var a;</code>
+                <p>A JavaScript identifier must start with a letter, underscore (_), or dollar sign ($); subsequent characters can also be digits (0-9).</p>
+            </article>
+        </section>
+
+        <!-- SECTION 6 (CODE ELEMENT #3 & #4) -->
+        <section class="main-section" id="Declaring_variables">
+            <header>Declaring variables</header>
+            <article>
+                <p>You can declare a variable in three distinct ways:</p>
+                <p>With the keyword var. For example,</p>
+                <code>var x = 42;</code>
+                <p>This syntax can be used to declare both local and global variables, depending on the execution context.</p>
+                <p>With the keyword const or let. For example,</p>
+                <code>let y = 13;</code>
+                <p>This syntax can be used to declare a block-scoped local variable.</p>
+            </article>
+        </section>
+
+        <!-- SECTION 7 (CODE ELEMENT #5) -->
+        <section class="main-section" id="Variable_scope">
+            <header>Variable scope</header>
+            <article>
+                <p>When you declare a variable outside of any function, it is called a global variable, because it is available to any other code in the current document.</p>
+                <p>When you declare a variable within a function, it is called a local variable, because it is available only within that function.</p>
+                <code>if (true) { var x = 5; } console.log(x); // 5</code>
+            </article>
+        </section>
+    </main>
+</body>
+</html>
